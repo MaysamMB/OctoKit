@@ -13,7 +13,7 @@ from __future__ import annotations
 GETTING_STARTED = """
 # Getting Started
 
-WinToolkit is a small suite of Windows maintenance and developer tools in
+OctoKit is a small suite of Windows maintenance and developer tools in
 one application: an application inventory scanner, a leftover-files
 cleaner, a temporary-files cleaner, and a project scaffolding tool.
 
@@ -326,7 +326,7 @@ that is a literal statement, not caution for its own sake.
 PERMISSIONS_GUIDE = """
 # Permissions / Administrator Guide
 
-WinToolkit runs as a normal user by default and does not request
+OctoKit runs as a normal user by default and does not request
 Administrator privileges at startup. Some individual operations do need
 elevation:
 
@@ -384,11 +384,12 @@ progress — there is no automatic rollback of steps already taken).
 
 ABOUT_TEXT = """
 
-# About WinToolkit
+# About OctoKit
 
-A unified Windows desktop utility suite built around four tools:
+A unified Windows desktop utility suite built around five tools:
 
 - Application Inventory
+- Storage Explorer
 - Application Leftovers Cleaner
 - Temporary Files Cleaner
 - Project Generator
@@ -405,11 +406,25 @@ allow-listed execution layer — the UI never runs arbitrary PowerShell.
 
 [LinkedIn](https://www.linkedin.com/in/maysam-baradiya-589757347/)
 
-**Version:** 1.0.0
+**Version:** 0.2.0
 
 """
 
 SECTIONS: dict[str, tuple[str, str]] = {
+    "storage": ("Storage Explorer Guide", """# Storage Explorer
+
+Read-only local metadata scan: List drives, then scan a selected fixed drive,
+or Choose folder. Expand the size-sorted tree and select any item for details.
+Re-scan selected item replaces the current scope. Largest files shows the top
+100 files across the scan. Timed summaries trace the largest observed child.
+
+Logical bytes are not physical/reclaimable space. Hard links may be counted
+multiple times. Links, cloud placeholders and inaccessible paths are excluded.
+Partial results and cancellation are labeled. A 300,000-node limit bounds memory;
+scan smaller folders if reached. Advice is a hint, not deletion authorization.
+No deletion, elevation or network upload is performed. See STORAGE_EXPLORER.md
+for Windows trial steps and limitations.
+"""),
     "getting_started": ("Getting Started", GETTING_STARTED),
     "dashboard": ("Dashboard Guide", DASHBOARD_GUIDE),
     "inventory": ("Application Inventory Guide", APPLICATION_INVENTORY_GUIDE),

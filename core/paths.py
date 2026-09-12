@@ -24,6 +24,8 @@ import os
 import sys
 from pathlib import Path
 
+# Retain the legacy on-disk data namespace so upgrades preserve settings,
+# logs and custom templates. The public application name is OctoKit.
 APP_NAME = "WinToolkit"
 APP_AUTHOR = "WinToolkit"
 

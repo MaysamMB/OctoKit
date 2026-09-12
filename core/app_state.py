@@ -21,6 +21,7 @@ class AppState(QObject):
     def __init__(self):
         super().__init__()
         self.inventory_total_apps: int | None = None
+        self.storage_summary: str | None = None
         self.inventory_broken: int | None = None
         self.inventory_orphans: int | None = None
         self.inventory_last_scan: datetime | None = None

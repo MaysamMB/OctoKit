@@ -14,12 +14,16 @@ def test_build_application_wires_all_pages(tmp_path, monkeypatch):
     from main import build_application
 
     app, window = build_application()
+    assert app.applicationName() == "OctoKit"
+    assert app.applicationVersion() == "0.2.0"
+    assert window.windowTitle().startswith("OctoKit")
 
     expected_pages = {
         "dashboard",
         "inventory",
         "leftovers",
         "tempcleaner",
+        "storage",
         "projectgen",
         "settings",
         "help",
