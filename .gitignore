@@ -1,0 +1,45 @@
+# ═══ Python ═══
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+sdist/
+wheels/
+
+# ═══ Virtual Environments ═══
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# ═══ PyInstaller / Build Outputs ═══
+*.spec
+*.exe
+*.dll
+*.pdb
+*.manifest
+
+# ═══ IDE ═══
+.vscode/
+.idea/
+*.swp
+
+# ═══ OS ═══
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ═══ Logs ═══
+*.log
+*.tmp
+*.bak
+logs/
+
+# ═══ Project-specific (احتياط) ═══
+# لو في ملفات ضخمة بـ assets أو features، أضفها هنا لاحقاً

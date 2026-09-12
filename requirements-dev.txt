@@ -1,0 +1,5 @@
+# Additional tools needed only to run the test suite or build the
+# packaged executable — not needed to run WinToolkit itself.
+-r requirements.txt
+pytest==9.1.1
+pyinstaller==6.22.2

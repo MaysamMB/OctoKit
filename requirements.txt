@@ -1,0 +1,9 @@
+# Runtime dependency for WinToolkit.
+#
+# PowerShell itself (pwsh.exe or Windows PowerShell) is NOT a Python
+# dependency — it is a separate, external prerequisite. WinToolkit detects
+# it at startup (see core/powershell.py: PowerShellService.is_available())
+# and degrades gracefully (Application Inventory, Leftovers Cleaner, and
+# Temp Files Cleaner become unavailable with a clear message; Project
+# Generator and Settings still work) if it is missing.
+PySide6==6.11.2
