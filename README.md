@@ -1,6 +1,9 @@
-# WinToolkit
+# OctoKit
 
-A unified Windows desktop utility toolkit (PySide6) combining four
+Version 0.2.0: **Storage Explorer** adds a read-only hierarchical storage scan.
+See [Windows trial instructions and limitations](STORAGE_EXPLORER.md).
+
+A unified Windows desktop utility toolkit (PySide6) combining five
 previously-standalone tools into one modular application:
 
 - **Application Inventory** — read-only. Lists installed applications,

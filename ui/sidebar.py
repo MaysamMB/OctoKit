@@ -24,6 +24,7 @@ NAV_STRUCTURE = [
             ("inventory", "Application Inventory", "apps", True),
             ("leftovers", "App Leftovers Cleaner", "broom", True),
             ("tempcleaner", "Temp Files Cleaner", "trash", True),
+            ("storage", "Storage Explorer", "folder", True),
         ],
     ),
     (
@@ -60,7 +61,7 @@ class Sidebar(QWidget):
         outer.setContentsMargins(0, 0, 0, 0)
         outer.setSpacing(0)
 
-        title = QLabel("WinToolkit")
+        title = QLabel("OctoKit")
         title.setObjectName("appTitle")
         outer.addWidget(title)
 

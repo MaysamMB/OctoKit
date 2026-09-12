@@ -1,5 +1,5 @@
 """
-WinToolkit — entry point.
+OctoKit — entry point.
 
 Wires together core services, feature services, and the UI shell. No
 business logic lives here — this module only constructs objects and
@@ -25,6 +25,8 @@ from features.project_generator.template_manager import TemplateManager
 from features.project_generator.view import ProjectGeneratorView
 from features.temp_cleaner.service import TempCleanerService
 from features.temp_cleaner.view import TempCleanerView
+from features.storage_explorer.service import StorageService
+from features.storage_explorer.view import StorageView
 from help.view import HelpView
 from settings.view import SettingsView
 from ui.about_view import AboutView
@@ -34,7 +36,8 @@ from ui.theme import ThemeManager
 
 def build_application() -> tuple[QApplication, MainWindow]:
     app = QApplication.instance() or QApplication(sys.argv)
-    app.setApplicationName("WinToolkit")
+    app.setApplicationName("OctoKit")
+    app.setApplicationVersion("0.2.0")
 
     config = ConfigManager()
     configure_logging(level=config.config.log_level)
@@ -65,6 +68,7 @@ def build_application() -> tuple[QApplication, MainWindow]:
 
     temp_view = TempCleanerView(TempCleanerService(powershell), app_state, config)
     window.register_page("tempcleaner", temp_view)
+    window.register_page("storage", StorageView(StorageService(), app_state))
 
     project_gen_view = ProjectGeneratorView(
         ProjectGeneratorService(template_manager), app_state, config

@@ -12,7 +12,7 @@ from ui.sidebar import Sidebar
 class MainWindow(QWidget):
     def __init__(self, app_state: AppState):
         super().__init__()
-        self.setWindowTitle("WinToolkit — Windows Desktop Utility Suite")
+        self.setWindowTitle("OctoKit — Windows Desktop Utility Suite")
         self.resize(1180, 760)
         self.setMinimumSize(860, 560)
 

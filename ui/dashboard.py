@@ -110,6 +110,7 @@ class Dashboard(QWidget):
         quick_row = QHBoxLayout()
         for key, label, icon_name in [
             ("inventory", "Scan Applications", "apps"),
+            ("storage", "Explore Storage", "folder"),
             ("tempcleaner", "Scan Temp Files", "trash"),
             ("leftovers", "Clean Up a Program", "broom"),
             ("projectgen", "New Project", "code"),
@@ -145,6 +146,7 @@ class Dashboard(QWidget):
         self.projects_card.set_value(str(state.projects_generated_count))
 
         lines = [
+            f"Storage Explorer: {state.storage_summary or 'No scan yet'}",
             f"Last application scan: {_fmt_time(state.inventory_last_scan)}",
             f"Last temp files scan: {_fmt_time(state.temp_last_scan)}   ·   Last cleanup: {_fmt_time(state.temp_last_cleanup)}",
             f"Last leftovers scan: {_fmt_time(state.leftovers_last_scan)}",
